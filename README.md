@@ -1,7 +1,7 @@
 # weather-app
 App de previsão do tempo feito em React.JS
 
-#screenshots
+# screenshots
 
 ### desktop
 ![Screenshot Capture - 2023-03-02 - 15-21-05](https://user-images.githubusercontent.com/104312621/222526972-e1ab450b-3060-4305-b03c-db78a5ec3d63.png)
