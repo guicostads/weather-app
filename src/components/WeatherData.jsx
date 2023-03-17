@@ -1,13 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import "../App.css";
-import WeatherImg from "../imgs/weather-app-icon.png";
+import './WeatherData.css'
 import { v4 as uuid } from "uuid";
-import {
-  FaSpinner,
-  FaThermometer as Thermometericon,
-  FaWind as WindIcon,
-} from "react-icons/fa";
+import { FaSpinner } from "react-icons/fa";
+import { Thermometer, Wind } from "phosphor-react";
+import ErrorPage from "./ErrorPage";
 
 const WeatherData = () => {
   const [city, setCity] = useState("");
@@ -15,7 +12,7 @@ const WeatherData = () => {
   const [searchedCity, setSearchedCity] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [emptyInput, setEmptyInput] = useState("");
-  const [error, setError] = useState("");
+  
 
   const getCity = (e) => {
     setSearchedCity(e.target.value);
@@ -27,6 +24,15 @@ const WeatherData = () => {
     searchedCity === ""
       ? setEmptyInput("Por favor, digite uma cidade.")
       : setEmptyInput("");
+  };
+
+  const upperCaseInitials = (words) => {
+    return words
+      .split(" ")
+      .map((word) => {
+        return word.charAt(0).toUpperCase() + word.substring(1);
+      })
+      .join(" ");
   };
 
   const translatedWeatherTable = {
@@ -50,6 +56,7 @@ const WeatherData = () => {
         setWeather(data);
         console.log(data);
       } catch (error) {
+       <ErrorPage />
       } finally {
         setIsLoading(false);
       }
@@ -76,20 +83,13 @@ const WeatherData = () => {
             )}
           </button>
         </div>
-        <div className="no-input">
+        <span className="no-input">
           <h3>{emptyInput}</h3>
-        </div>
+        </span>
       </form>
       {city && weather && (
         <div className="weather-data">
-          <h1>
-            {city
-              .split(" ")
-              .map((word) => {
-                return word.charAt(0).toUpperCase() + word.substring(1);
-              })
-              .join(" ")}
-          </h1>
+          <h1>{upperCaseInitials(city)}</h1>
           <h2>Tempo atual:</h2>
           <h2>{weather.temperature.replace("+", "")}</h2>
           <p>
@@ -112,11 +112,11 @@ const WeatherData = () => {
                         )}
                   </h3>
                   <div className="row">
-                    <Thermometericon />
+                    <Thermometer />
                     <strong>{dayForecast.temperature.replace("+", "")}</strong>
                   </div>
                   <div className="row">
-                    <WindIcon />
+                    <Wind />
                     <strong>{dayForecast.wind}</strong>
                   </div>
                 </li>
