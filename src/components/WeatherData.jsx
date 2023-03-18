@@ -56,7 +56,7 @@ const WeatherData = () => {
         setWeather(data);
         console.log(data);
       } catch (error) {
-       <ErrorPage />
+       return <ErrorPage />
       } finally {
         setIsLoading(false);
       }
@@ -83,7 +83,7 @@ const WeatherData = () => {
             )}
           </button>
         </div>
-        <span className="no-input">
+        <span className="empty-input">
           <h3>{emptyInput}</h3>
         </span>
       </form>
@@ -109,7 +109,7 @@ const WeatherData = () => {
                           weekday: "long",
                         }).format(
                           new Date().setDate(new Date().getDate() + index + 1)
-                        )}
+                        ).replace('-feira', '')}
                   </h3>
                   <div className="row">
                     <Thermometer />

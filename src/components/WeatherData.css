@@ -1,143 +1,141 @@
 input {
-    width: 70%;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    font-size: 1rem;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
+  width: 70%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1rem;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+button {
+  width: 50%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgba(30, 108, 125, 0.252);
+  color: rgba(0, 0, 0, 0.799);
+  font-size: 1rem;
+  line-height: 50%;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+  filter: brightness(0.6);
+  cursor: pointer;
+}
+
+h1,
+h2 {
+  color: rgba(0, 0, 0, 0.715);
+  margin-top: 0.5rem;
+}
+.App {
+  width: 45rem;
+  height: 37rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(1rem) saturate(150%);
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.searchTab {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 35rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  margin-top: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.weather-data ul h3 {
+ width: 5rem;
+}
+
+.weather-data li {
+  width: 40rem;
+  margin-top: 0.8rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(25, 95, 169, 0.238);
+  border-radius: 1rem;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.loading {
+  animation: spin 1s infinity;
+}
+
+.empty-input {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateZ(0deg);
   }
-  
+
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@media screen and (max-width: 769px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  input {
+    width: 100%;
+  }
+
   button {
-    width: 50%;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    background-color: rgba(30, 108, 125, 0.252);
-    color: rgba(0, 0, 0, 0.799);
-    font-size: 1rem;
-    line-height: 50%;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.25);
+    font-size: 80%;
+    line-height: 100%;
   }
-  
-  button:hover {
-    filter: brightness(0.6);
-    cursor: pointer;
-  }
-  
-  h1,
-  h2 {
-    color: rgba(0, 0, 0, 0.715);
-    margin-top: 0.5rem;
-  }
+
   .App {
-    width: 45rem;
-    height: 37rem;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    border-radius: 0.5rem;
-    backdrop-filter: blur(1rem) saturate(150%);
-    background-color: rgba(255, 255, 255, 0.45);
+    width: 100vw;
+    height: 100vh;
   }
-  
+
   .searchTab {
+    width: 90vw;
+    height: 5rem;
     margin: 0 auto;
-    padding: 1rem;
-    width: 35rem;
-    display: flex;
-    gap: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-    margin-top: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.45);
   }
-  
-  .weather-data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
-  }
-  
-  .weather-data ul {
-    width: 100%;
-  }
-  
+
   .weather-data li {
-    width: 40rem;
-    text-align: center;
-    margin-top: 0.8rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
-    background-color: rgba(25, 95, 169, 0.238);
-    border-radius: 1rem;
+    width: 90vw;
   }
-  
-  .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  
-  .loading {
-    animation: spin 1s infinity;
-  }
-  
-  .no-input {
-    width: 100%;
-    display: grid;
-    place-items: center;
-    margin-top: 1rem;
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotateZ(0deg);
-    }
-  
-    100% {
-      transform: rotateZ(0deg);
-    }
-  }
-  @media screen and (max-width: 769px) {
-    body {
-      width: 100vw;
-      height: 100vh;
-    }
-  
-    input {
-      width: 100%;
-    }
-  
-    button {
-      font-size: 80%;
-      line-height: 100%;
-    }
-  
-    .App {
-      width: 100vw;
-      height: 100vh;
-    }
-  
-    .searchTab {
-      width: 90vw;
-      height: 5rem;
-      margin: 0 auto;
-    }
-  
-    .weather-data li {
-      width: 90vw;
-    }
-  }
-  
+}
