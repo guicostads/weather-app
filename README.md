@@ -2,6 +2,12 @@
 App de previsão do tempo feito em React.JS
 Weather forecast app made with React.
 
+Projeto realizado consumindo uma API gratuita. A estilização foi feita com CSS puro.
+API original em inglês, então utilizei uma variável em forma de objeto contendo como chaves os termos em inglês e como valores sua tradução. 
+Utilizei para os ícones a biblioteca Phosphor Icons.
+
+
+
 ### screenshots
 
 # desktop
