@@ -6,16 +6,18 @@ Projeto realizado consumindo uma API gratuita. A estilização foi feita com CSS
 API original em inglês, então utilizei uma variável em forma de objeto contendo como chaves os termos em inglês e como valores sua tradução. 
 Utilizei para os ícones a biblioteca Phosphor Icons.
 
+# deploy
 
+https://velvety-alfajores-bd8057.netlify.app/
 
-### screenshots
+# screenshots
 
-# desktop
+### desktop
 ![2023-03-18 (4)](https://user-images.githubusercontent.com/104312621/226406895-ed6f8eeb-2f1e-4a2c-aa8e-22458bf2a718.png)
 
 ![2023-03-18 (1)](https://user-images.githubusercontent.com/104312621/226406631-d768c724-d1c1-4ccc-915b-99e0d6faaf00.png)
 
-# mobile
+### mobile
 
 
 ![2023-03-18 (2)](https://user-images.githubusercontent.com/104312621/226407159-ede59c72-2d30-4c1d-9ea6-29798c371dad.png)
